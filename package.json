@@ -1,0 +1,22 @@
+{
+  "name": "fizz-buzz-test",
+  "version": "1.0.0",
+  "description": "Fizz Buzz starter code for FEW 2.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Make-School-Labs/fizz-buzz-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Make-School-Labs/fizz-buzz-test/issues"
+  },
+  "homepage": "https://github.com/Make-School-Labs/fizz-buzz-test#readme",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}

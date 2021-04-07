@@ -7,8 +7,8 @@ const FIZZBUZZ = 'fizzbuzz'
  * @param {Number} n
  * @returns {Boolean} fizziness 
  * */
-function isFizzy(n) {
-  return n % 3 === 0
+const isFizzy = (n, fizzOn = 3) => {
+  return n % fizzOn === 0
 }
 
 /**
@@ -16,8 +16,8 @@ function isFizzy(n) {
  * @param {Number} n 
  * @returns {Boolean} buzziness
  */
-function isBuzzy(n) {
-  return n % 5 === 0
+const isBuzzy = (n, buzzOn = 5) => {
+  return n % buzzOn === 0
 }
 
 /**
@@ -25,10 +25,10 @@ function isBuzzy(n) {
  * @param {Number} n
  * @returns {String} '', 'FIZZ', 'BUZZ', or 'FIZZBUZZ'
  */
-function fizzyBuzzy(n) {
+const fizzyBuzzy = (n, fizzOn = 3, buzzOn = 5) => {
   let result = ''
-  if (isFizzy(n)) { result += FIZZ }
-  if (isBuzzy(n)) { result += BUZZ }
+  if (isFizzy(n, fizzOn)) { result += FIZZ }
+  if (isBuzzy(n, buzzOn)) { result += BUZZ }
   return result
 }
 
@@ -37,15 +37,16 @@ function fizzyBuzzy(n) {
  * @param {Number} count 
  * @returns {Object} with properties count, fizz, buzz, and fizzbuzz
  */
-function fizzBuzz(count) {
+const fizzBuzz = (count) => {
   let result = { count, fizz: 0, buzz: 0, fizzBuzz: 0 }
   for (let i = 1; i <= count; i += 1) {
     const str = fizzyBuzzy(i)
-    switch(str) {
-      case FIZZ: 
+
+    switch (str) {
+      case FIZZ:
         result.fizz += 1
         break
-      case BUZZ: 
+      case BUZZ:
         result.buzz += 1
         break
       case FIZZBUZZ:
