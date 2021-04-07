@@ -15,6 +15,7 @@ test('fizzbuzz', () => {
 
 // Test Fizz and Buzz
 test('isFizzy', () => {
+  expect(fb.isFizzy()).toBe(false)
   expect(fb.isFizzy(3)).toBe(true)
   expect(fb.isFizzy(5)).toBe(false)
   expect(fb.isFizzy(1000)).toBe(false)
@@ -22,6 +23,7 @@ test('isFizzy', () => {
 })
 
 test('isBuzzy', () => {
+  expect(fb.isBuzzy()).toBe(false)
   expect(fb.isBuzzy(3)).toBe(false)
   expect(fb.isBuzzy(5)).toBe(true)
   expect(fb.isBuzzy(1000)).toBe(true)
@@ -46,6 +48,14 @@ test('fizzyBuzzyAlt', () => {
 
 // Test fizzBuzz main function
 test('fizzBuzz', () => {
+  expect(fb.fizzBuzz("121").fizz).toBe(32)
+  expect(fb.fizzBuzz("121").buzz).toBe(16)
+  expect(fb.fizzBuzz("121").fizzBuzz).toBe(8)
+
+  expect(fb.fizzBuzz(0).fizz).toBe(0)
+  expect(fb.fizzBuzz(0).buzz).toBe(0)
+  expect(fb.fizzBuzz(0).fizzBuzz).toBe(0)
+
   expect(fb.fizzBuzz(1000000).buzz).toBe(133334)
   expect(fb.fizzBuzz(1000000).fizz).toBe(266667)
   expect(fb.fizzBuzz(1000000).fizzBuzz).toBe(66666)
