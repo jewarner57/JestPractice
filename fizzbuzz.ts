@@ -37,8 +37,10 @@ const fizzyBuzzy = (n: number, fizzOn: number = 3, buzzOn: number = 5): string =
  * @param {Number} count 
  * @returns {Object} with properties count, fizz, buzz, and fizzbuzz
  */
-const fizzBuzz = (count: number): Object => {
-  let result = { count, fizz: 0, buzz: 0, fizzBuzz: 0 }
+type Result = { count: number, fizz: number, buzz: number, fizzBuzz: number }
+
+const fizzBuzz = (count: number): Result => {
+  let result: Result = { count: 0, fizz: 0, buzz: 0, fizzBuzz: 0 };
   for (let i: number = 1; i <= count; i += 1) {
     const str: string = fizzyBuzzy(i)
 

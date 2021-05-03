@@ -36,13 +36,8 @@ var fizzyBuzzy = function (n, fizzOn, buzzOn) {
     }
     return result;
 };
-/**
- * Generates a results object describing a sequence of fizz buzz for count.
- * @param {Number} count
- * @returns {Object} with properties count, fizz, buzz, and fizzbuzz
- */
 var fizzBuzz = function (count) {
-    var result = { count: count, fizz: 0, buzz: 0, fizzBuzz: 0 };
+    var result = { count: 0, fizz: 0, buzz: 0, fizzBuzz: 0 };
     for (var i = 1; i <= count; i += 1) {
         var str = fizzyBuzzy(i);
         switch (str) {
