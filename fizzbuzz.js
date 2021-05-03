@@ -37,7 +37,7 @@ var fizzyBuzzy = function (n, fizzOn, buzzOn) {
     return result;
 };
 var fizzBuzz = function (count) {
-    var result = { count: 0, fizz: 0, buzz: 0, fizzBuzz: 0 };
+    var result = { count: count, fizz: 0, buzz: 0, fizzBuzz: 0 };
     for (var i = 1; i <= count; i += 1) {
         var str = fizzyBuzzy(i);
         switch (str) {
